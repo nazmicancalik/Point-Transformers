@@ -49,7 +49,6 @@ def main(args):
     os.environ["CUDA_VISIBLE_DEVICES"] = str(args.gpu)
     logger = logging.getLogger(__name__)
 
-    print(args.pretty())
 
     '''DATA LOADING'''
     logger.info('Load dataset ...')
@@ -96,6 +95,8 @@ def main(args):
     best_class_acc = 0.0
     best_epoch = 0
     mean_correct = []
+
+    
 
     '''TRANING'''
     logger.info('Start training...')
